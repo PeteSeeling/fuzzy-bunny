@@ -8,12 +8,16 @@ import {
 const form = document.querySelector('.bunny-form');
 const logoutButton = document.getElementById('logout');
 
-form.addEventListener('submit', async e => {
+form.addEventListener('submit', async(e) => {
+    e.preventDefault();
     // prevent default
-
-    // get the name and family id from the form
-
+    const data = new FormData(form);
+    // get the name and family id from the for
+    const name = data.get('bunny-name');
+    const familyId = data.get('family-id');
     // use createBunny to create a bunny with this name and family id
+console.log(name, familyId)
+    await createBunny(name, familyId);
     
     form.reset();
 });
