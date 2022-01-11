@@ -44,7 +44,8 @@ async function displayFamilies() {
            
         // for each of this family's bunnie
             bunnyEl.addEventListener('click', async() =>{
-                await deleteBunny();
+                await deleteBunny(bunny.id);
+                displayFamilies();
          
             });
             bunnyEl.textContent = `${bunny.name}`;
@@ -53,6 +54,7 @@ async function displayFamilies() {
             familyBunnies.append(bunnyEl);
             wholeFamily.append(familyBunnies);
         // add an event listener to the bunny el. On click, delete the bunny, then refetch and redisplay all families.
+        familiesEl.append(wholeFamily);
 
 
         // append this bunnyEl to the bunniesEl
