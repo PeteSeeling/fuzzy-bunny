@@ -44,7 +44,11 @@ async function displayFamilies() {
 
             bunnyEl.textContent = `${bunny.name}`;
             familyBunnies.append(bunnyEl);
-    
+        // make an element with the css class 'bunny', and put the bunny's name in the text content      
+            // wholeFamily.append(familyBunnies);
+        // add an event listener to the bunny el. On click, delete the bunny, then refetch and redisplay all families.
+            // familiesEl.append(wholeFamily);
+        // append this bunnyEl to the bunniesEl
         }
         wholeFamily.append(familyName, familyBunnies);
         familiesEl.append(wholeFamily);
