@@ -38,15 +38,7 @@ window.addEventListener('load', async() => {
         idDropdown.append(optionEl);
 
     }
-    // for each family
-
-    // create an option tag
-
-    // set the option's value and text content
-    // and append the option to the select
 });
-
-
 checkAuth();
 
 logoutButton.addEventListener('click', () => {
