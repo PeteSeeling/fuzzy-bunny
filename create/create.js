@@ -16,8 +16,10 @@ form.addEventListener('submit', async(e) => {
     const name = data.get('bunny-name');
     const familyId = data.get('family-id');
     // use createBunny to create a bunny with this name and family id
-    await createBunny(name, familyId);
-    
+    const newBunny = { name, family_id:familyId };
+ 
+    await createBunny(newBunny);
+
     form.reset();
 });
 
@@ -32,7 +34,7 @@ window.addEventListener('load', async() => {
 
         optionEl.value = family.id;
         optionEl.textContent = family.name;
-console.log(familyId);
+
         idDropdown.append(optionEl);
 
     }
